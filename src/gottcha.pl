@@ -198,7 +198,7 @@ else{
 		my ($p) = $fastq =~ /([^\/]+)\.\w+$/;
 		print "[$ct] Split-trimming: $fastq...\n";
 		&executeCommand("splitrim                \\
-		                   --inFile=$fastq       \\
+		                   --inFile=/"$fastq/"       \\
 		                   --fixL=$TRIM_FIXL     \\
 		                   --recycle             \\
 		                   --ascii=$TRIM_ASCII   \\
